@@ -1,9 +1,12 @@
 cmake_minimum_required (VERSION 2.6)
 
-project(Superbuild_main)
+project(SUPERBUILD_MAIN)
 
 include(CPack)
 set(CPACK_GENERATOR NSIS)
+
+message("SUPERBUILD_EXTERN_DIR is " ${SUPERBUILD_EXTERN_DIR})
+find_package(SUPERBUILD_EXTERN)
 
 message("Hello from the main repository's CMakeLists.txt!")
 
