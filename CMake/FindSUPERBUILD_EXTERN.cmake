@@ -5,7 +5,7 @@ find_program(
                 EXTERN_BINARY 
                 # hack
                 "DirectoryForCmakeSuperbuild_Extern/extern_binary"
-                ${SUPERBUILD_EXTERN_DIR}]
+                "C:/_FILES/home/cmbuild/extern-install/DirectoryForCmakeSuperbuild_Extern"]
             )
 
 message("EXTERN_BINARY IS " ${EXTERN_BINARY})
