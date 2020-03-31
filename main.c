@@ -2,6 +2,6 @@
 
 int main()
 {
-	printf("Hello from the main project!")
+	printf("Hello from the main project!");
 	return 0;
 }
