@@ -1,0 +1,1 @@
+find_program(EXTERN_BINARY "extern_binary")

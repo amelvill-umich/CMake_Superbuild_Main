@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
 
+set(thisFileDirectory ${CMAKE_CURRENT_SOURCE_DIR})
+
 project(SUPERBUILD_MAIN)
 
 include(CPack)
@@ -7,11 +9,8 @@ set(CPACK_GENERATOR NSIS)
 
 message("SUPERBUILD_EXTERN_DIR is " ${SUPERBUILD_EXTERN_DIR})
 
-set(CMAKE_MODULE_PATH ${SUPERBUILD_EXTERN_DIR} ${CMAKE_MODULE_PATH})
 
-
-# hack
-set(CMAKE_MODULE_PATH "C:/_FILES/home/CMake_Superbuild_Root/build/extern-prefix/src/extern" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${thisFileDirectory}CMake/" ${CMAKE_MODULE_PATH})
 
 message("CMAKE_MODULE_PATH is now " ${CMAKE_MODULE_PATH})
 
