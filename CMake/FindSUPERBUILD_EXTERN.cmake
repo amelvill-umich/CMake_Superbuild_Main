@@ -15,3 +15,5 @@ message("EXTERN_BINARY IS " ${EXTERN_BINARY})
 # foreach (_variableName ${_variableNames})
 #     message(STATUS "${_variableName}=${${_variableName}}")
 # endforeach()
+
+set(SUPERBUILD_EXTERN_EXECUTABLE ${EXTERN_BINARY})
