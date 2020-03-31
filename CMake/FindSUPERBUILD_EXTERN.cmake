@@ -3,7 +3,8 @@ message("Start of find script for the extern project.")
 # note that SUPERBUILD_EXTERN_DIR is a cache varaible for this project
 find_program(
                 EXTERN_BINARY 
-                "extern_binary"
+                # hack
+                "DirectoryForCmakeSuperbuild_Extern/extern_binary"
                 ${SUPERBUILD_EXTERN_DIR}]
             )
 
