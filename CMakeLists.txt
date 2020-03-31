@@ -2,6 +2,9 @@ cmake_minimum_required (VERSION 2.6)
 
 project(Superbuild_main)
 
+include(CPack)
+set(CPACK_GENERATOR NSIS)
+
 message("Hello from the main repository's CMakeLists.txt!")
 
 # Set Properties->General->Configuration Type to Application(.exe)
