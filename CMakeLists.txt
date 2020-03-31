@@ -10,5 +10,5 @@ message("Hello from the main repository's CMakeLists.txt!")
 add_executable (main_binary main.c)
 
 # Adds logic to INSTALL.vcproj to copy the compiled application to destination directory
-install (TARGETS extern_binary
+install (TARGETS main_binary
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
