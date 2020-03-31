@@ -6,6 +6,9 @@ include(CPack)
 set(CPACK_GENERATOR NSIS)
 
 message("SUPERBUILD_EXTERN_DIR is " ${SUPERBUILD_EXTERN_DIR})
+
+set(CMAKE_MODULE_PATH ${SUPERBUILD_EXTERN_DIR} ${CMAKE_MODULE_PATH})
+
 find_package(SUPERBUILD_EXTERN)
 
 message("Hello from the main repository's CMakeLists.txt!")
