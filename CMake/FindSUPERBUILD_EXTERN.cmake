@@ -3,8 +3,8 @@ message("Start of find script for the extern project.")
 # note that SUPERBUILD_EXTERN_DIR is a cache varaible for this project
 find_program(
                 EXTERN_BINARY 
-                # hack
-                "DirectoryForCmakeSuperbuild_Extern/extern_binary"
+                "extern_binary"
+                 # hack
                 "C:/_FILES/home/cmbuild/extern-install/DirectoryForCmakeSuperbuild_Extern"]
             )
 
