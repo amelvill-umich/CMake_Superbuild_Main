@@ -20,12 +20,14 @@ find_package(SUPERBUILD_EXTERN)
 # and adds sources to the Solution Explorer
 add_executable (main_binary main.c)
 
+# This is found
 if(TARGET Extern::extern_binary)
     message("Extern::extern_binary exists as a target!")
 else()
     message("Missing target Extern::extern_binary")
 endif()
 
+# this is not
 if(TARGET extern_binary)
     message("extern_binary exists as a target!")
 else()
@@ -33,5 +35,5 @@ else()
 endif()
 
 # Adds logic to INSTALL.vcproj to copy the compiled application to destination directory
-install (TARGETS main_binary
+install (TARGETS main_binary Extern::extern_binary
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
