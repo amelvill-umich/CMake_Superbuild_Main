@@ -37,8 +37,8 @@ endif()
 # just blank
 #message("extern_binary is " ${extern_binary})
 
-get_property(extern_binary 
-            TARGET extern_location 
+get_property(extern_location
+            TARGET extern_binary
             PROPERTY IMPORTED_LOCATION)
 
 message("extern_location is " ${extern_location})
