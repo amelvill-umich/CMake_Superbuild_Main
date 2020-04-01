@@ -59,5 +59,5 @@ message("extern_location_debug is " ${extern_location_debug})
 install (TARGETS main_binary 
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
 
-install(TARGETS extern_binary
-        DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
+#install(TARGETS extern_binary
+#        DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
