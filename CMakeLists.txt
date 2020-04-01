@@ -6,10 +6,6 @@ set(thisFileDirectory ${CMAKE_CURRENT_SOURCE_DIR})
 
 project(SUPERBUILD_MAIN)
 
-include(CPack)
-set(CPACK_GENERATOR NSIS)
-
-
 # Set Properties->General->Configuration Type to Application(.exe)
 # Creates the executable with the listed sources
 # and adds sources to the Solution Explorer
