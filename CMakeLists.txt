@@ -61,5 +61,5 @@ message("extern_location_debug is " ${extern_location_debug})
 install (TARGETS main_binary #extern_binary can't go here, it says "target not defined" which is weird, maybe it's not a Target? What is a target?
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
 
-install(PROGRAMS extern_binary
+install(PROGRAMS ${extern_location_debug}
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
