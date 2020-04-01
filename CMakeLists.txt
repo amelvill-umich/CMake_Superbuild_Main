@@ -24,15 +24,17 @@ add_executable (main_binary main.c)
 if(TARGET Extern::extern_binary)
     message("Extern::extern_binary exists as a target!")
 else()
-    message("Missing target Extern::extern_binary")
+    message("target Extern::extern_binary does not exist")
 endif()
 
 # this is not
 if(TARGET extern_binary)
     message("extern_binary exists as a target!")
 else()
-    message("Missing target extern_binary")
+    message("target extern_binary does not exist")
 endif()
+
+message("extern_binary is " ${extern_binary})
 
 install (TARGETS main_binary #Extern::extern_binary can't go here, it says "target not defined" which is weird, maybe it's not a Target? What is a target?
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
