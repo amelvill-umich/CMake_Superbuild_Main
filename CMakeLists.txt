@@ -20,18 +20,16 @@ find_package(SUPERBUILD_EXTERN)
 # and adds sources to the Solution Explorer
 add_executable (main_binary main.c)
 
-# This is not found
-if(TARGET Extern::extern_binary)
-    message("Extern::extern_binary exists as a target!")
-else()
-    message("target Extern::extern_binary does not exist")
-endif()
-
-# this is found
 if(TARGET extern_binary)
     message("extern_binary exists as a target!")
 else()
     message("target extern_binary does not exist")
+endif()
+
+if(TARGET extern_export_binary)
+    message("extern_export_binary exists as a target!")
+else()
+    message("target extern_export_binary does not exist")
 endif()
 
 # just blank
@@ -58,8 +56,8 @@ message("isImported is " ${isImported})
 message("configs is " ${configs})
 message("extern_location_debug is " ${extern_location_debug})
 
-install (TARGETS main_binary #extern_binary can't go here, it says "target not defined" which is weird, maybe it's not a Target? What is a target?
+install (TARGETS main_binary 
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
 
-install(PROGRAMS ${extern_location_debug}
-        RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
+install(TARGETS extern_binary
+        DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
