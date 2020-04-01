@@ -37,5 +37,5 @@ endif()
 install (TARGETS main_binary #Extern::extern_binary can't go here, it says "target not defined" which is weird, maybe it's not a Target? What is a target?
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
 
-install(PROGRAMS Extern::extern_binary
+install(TARGETS Extern::extern_binary
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
