@@ -41,7 +41,17 @@ get_property(extern_location
             TARGET extern_binary
             PROPERTY IMPORTED_LOCATION)
 
+get_property(isImported
+            TARGET extern_binary
+            PROPERTY IMPORTED)
+
+get_property(configs
+            TARGET extern_binary
+            PROPERTY IMPORTED_CONFIGURATIONS)
+
 message("extern_location is " ${extern_location})
+message("isImported is " ${isImported})
+message("configs is " ${configs})
 
 install (TARGETS main_binary #extern_binary can't go here, it says "target not defined" which is weird, maybe it's not a Target? What is a target?
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
