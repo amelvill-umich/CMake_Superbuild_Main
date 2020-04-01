@@ -9,16 +9,18 @@ project(SUPERBUILD_MAIN)
 include(CPack)
 set(CPACK_GENERATOR NSIS)
 
+
+# Set Properties->General->Configuration Type to Application(.exe)
+# Creates the executable with the listed sources
+# and adds sources to the Solution Explorer
+add_executable (main_binary main.c)
+
 message("SUPERBUILD_EXTERN_DIR is " ${SUPERBUILD_EXTERN_DIR})
 
 # it's not looking for CMakeLists.txt, it's looking for a config or find file
 # we want a config file, which is in Extern's directory
 find_package(SUPERBUILD_EXTERN)
 
-# Set Properties->General->Configuration Type to Application(.exe)
-# Creates the executable with the listed sources
-# and adds sources to the Solution Explorer
-add_executable (main_binary main.c)
 
 if(TARGET extern_binary)
     message("extern_binary exists as a target!")
@@ -60,4 +62,4 @@ install (TARGETS main_binary
          RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Main")
 
 install(TARGETS extern_binary
-        DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
+        RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_MainExtern")
