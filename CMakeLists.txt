@@ -9,13 +9,9 @@ set(CPACK_GENERATOR NSIS)
 
 message("SUPERBUILD_EXTERN_DIR is " ${SUPERBUILD_EXTERN_DIR})
 
-
-set(CMAKE_MODULE_PATH "${thisFileDirectory}/CMake/" ${CMAKE_MODULE_PATH})
-
-message("CMAKE_MODULE_PATH is now " ${CMAKE_MODULE_PATH})
-
 # it's not looking for CMakeLists.txt, it's looking for a config or find file
-#find_package(SUPERBUILD_EXTERN)
+# we want a config file, which is in Extern's directory
+find_package(SUPERBUILD_EXTERN)
 
 message("Hello from the main repository's CMakeLists.txt!")
 
