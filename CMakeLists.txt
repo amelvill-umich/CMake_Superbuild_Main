@@ -15,7 +15,7 @@ set(CMAKE_MODULE_PATH "${thisFileDirectory}/CMake/" ${CMAKE_MODULE_PATH})
 message("CMAKE_MODULE_PATH is now " ${CMAKE_MODULE_PATH})
 
 # it's not looking for CMakeLists.txt, it's looking for a config or find file
-find_package(SUPERBUILD_EXTERN)
+#find_package(SUPERBUILD_EXTERN)
 
 message("Hello from the main repository's CMakeLists.txt!")
 
